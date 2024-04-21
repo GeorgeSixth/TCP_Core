@@ -1,0 +1,9 @@
+{
+    "version": 4,
+    "vendor": {
+        "conan": {}
+    },
+    "include": [
+        "/home/george/Perso/TCP_Core/conan-build/Debug/generators/CMakePresets.json"
+    ]
+}

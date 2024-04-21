@@ -8,9 +8,6 @@ foreach(CMAKE_FILE ${CMAKE_FILES})
     include(${CMAKE_FILE})
 endforeach()
 
-if (TCP_CORE_BUILD_TESTS)
-    enable_testing()
-endif()
 
 # Add the source library
 add_subdirectory(source)

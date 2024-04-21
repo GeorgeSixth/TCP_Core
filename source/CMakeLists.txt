@@ -11,10 +11,15 @@ target_include_directories(TCP_CORE PUBLIC ${CMAKE_CURRENT_SOURCE_DIR} ${VULKAN_
 
 if (TCP_CORE_BUILD_TESTS)
     # Locate and link Google Test
+    enable_testing()
     find_package(GTest REQUIRED)
     target_link_libraries(TCP_CORE ${Vulkan_LIBRARIES} GTest::GTest GTest::Main)
     enable_testing()
     add_subdirectory(tests)
 else()
     target_link_libraries(TCP_CORE ${Vulkan_LIBRARIES})
+endif()
+
+if (TCP_CORE_BUILD_EXAMPLE)
+    add_subdirectory(bin)
 endif()
