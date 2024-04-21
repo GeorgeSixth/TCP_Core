@@ -9,10 +9,11 @@ class CompressorRecipe(ConanFile):
         del self.settings.compiler.libcxx
 
     def requirements(self):
-        self.requires("gtest/1.13.0")
+        self.requires("gtest/1.13.0"),
+        self.requires("boost/1.84.0"),
 
     def build_requirements(self):
-        self.tool_requires("cmake/3.26.4")
+        self.tool_requires("cmake/3.27.4")
 
     def layout(self):
         cmake_layout(self, build_folder="conan-build")
