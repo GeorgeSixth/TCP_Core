@@ -1,12 +1,14 @@
-# Add the engine library
+# Add the library
 file(GLOB_RECURSE TCP_CORE_SOURCES LIST_DIRECTORIES false
-    "*.cpp"
-    "*.hpp"
+    "./lib/*.cpp"
+    "./lib/*.hpp"
+    "./lib/*/*.cpp"
+    "./lib/*/*.hpp"
 )
 
 add_library(TCP_CORE ${TCP_CORE_SOURCES})
 
-# Include directories for the engine library
+# Include directories for the library
 target_include_directories(TCP_CORE PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 find_package(Boost REQUIRED)
